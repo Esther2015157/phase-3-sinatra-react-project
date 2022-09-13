@@ -1,4 +1,3 @@
-# Getting Started with Create React App
 PRICELINE RESTUARANT APP
 Is an app that users can search for Restuarant details,pricing.and restuarant reviews, Besides, they can change, retrieve, and cancel
 reservations.
