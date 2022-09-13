@@ -1,6 +1,9 @@
-PRICELINE RESTUARANT APP
-Is an app that users can search for Restuarant details,pricing.and restuarant reviews, Besides, they can change, retrieve, and cancel
+## Restuarant app
+Description
+ A web based Application that users can search for Restuarant details,pricing.and restuarant reviews, Besides, they can change, retrieve, and cancel
 reservations.
+
+
 ## Available Scripts
 Javascript;used for functionality of the application HTML ; used to create the structure of the application CSS;used to style the application db json server,My SQL to manage relational database
 In the project directory, you can run:
@@ -39,7 +42,8 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 
 
-### AUTHOR
+### Restuarant app
+Author
 Esther Muthoni
 
 
