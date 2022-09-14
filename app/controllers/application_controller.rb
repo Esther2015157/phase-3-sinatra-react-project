@@ -5,12 +5,12 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   #restuarant routes get method
   get "/restuarant" do
-    restuarant = restuarant.all
+    restuarant = Restuarant.all
     restuarant.to_json
   end
   #post routes for hotels method
   post "/restuarant" do
-    reserved = restuarant.create(
+    reserved = Restuarant.create(
       name: params[:name],
       location: params[:location],
       price: params[:price],
@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   end
   #patch or put routes method
   patch "/restuarant/:id" do
-    restuarant= restuarant.find(params[:id])
+    restuarant= Restuarant.find(params[:id])
     restuarant.update(
       name: params[:name],
       price: params[:price],
@@ -30,24 +30,24 @@ class ApplicationController < Sinatra::Base
   end
   #delete routes for restuarant method
   delete "/restuarant/:id" do
-    restuarant= restuarant.find(params[:id])
+    restuarant= Restuarant.find(params[:id])
     restuarant.destroy
     restuarant.to_json
   end
   get "/reviews" do
-    reviews = Review.all
+    reviews = CustomerReview.all
     reviews.to_json
   end
   #post method
   post "/reviews" do
-    new_review = Review.create(
+    new_review = CustomerReview.create(
       comment: params[:comment]
     )
     new_review.to_json
   end
   #patch method
   patch "/reviews/:id" do
-    reviews = Review.find(params[:id])
+    reviews = CustomerReview.find(params[:id])
     reviews.update(
       comment: params[:comment]
     )
@@ -55,7 +55,7 @@ class ApplicationController < Sinatra::Base
   end
 #delete method
 delete "/reviews/:id" do
-  reviews = Review.find(params[:id])
+  reviews = CustomerReview.find(params[:id])
   reviews.destroy
   reviews.to_json
 end

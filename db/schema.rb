@@ -18,37 +18,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_09_142234) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "restuarant", force: :cascade do |t|
+  create_table "restuarants", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.integer "price"
     t.string "description"
   end
 
-end
-get "/reviews" do
-  reviews = Review.all
-  reviews.to_json
-end
-#post method
-post "/reviews" do
-  new_review = Review.create(
-    comment: params[:comment]
-  )
-  new_review.to_json
-end
-#patch method
-patch "/reviews/:id" do
-  reviews = Review.find(params[:id])
-  reviews.update(
-    comment: params[:comment]
-  )
-  reviews.to_json
-end
-#delete method
-delete "/reviews/:id" do
-reviews = Review.find(params[:id])
-reviews.destroy
-reviews.to_json
-end
 end

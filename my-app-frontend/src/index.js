@@ -1,12 +1,12 @@
-import React from "react";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-const Footer = () => {
-  return (
-    <div className="footer">
-  
-    </div>
-  );
-};
 
-export default Footer;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
